@@ -1,11 +1,11 @@
-FROM registry.redhat.io/ubi8/ubi:8.1
+FROM registry.redhat.io/ubi8/ubi:latest
 
 LABEL io.openshift.s2i.destination="/tmp"  \
       io.openshift.s2i.scripts-url="image:///usr/local/s2i" \
       maintainer="Red Hat SAP Community of Practice"
 
 ENV SAPMACHINE_FILE_NAME='sapmachine-jdk-11.0.5-1.x86_64.rpm' \
-    HYBRIS_FILE_NAME='hybris.tar.gz' \
+    HYBRIS_FILE_NAME='hybris/hybris/1.0/hybris-1.0.gz' \
     HYBRIS_HOME='/opt/hybris' \
     STAGING_DIR='/tmp/staging'
 
